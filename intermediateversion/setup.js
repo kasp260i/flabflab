@@ -3,7 +3,7 @@ const gameOverSound = new Audio("../assets/sounds/gameover.mp3");
 const music = new Audio("../assets/sounds/music.mp3");
 music.loop = true;
 music.volume = 0.5;
-const timeBetweenUpdates = 10; //milliseconds
+const timeBetweenUpdates = 0.1; //milliseconds
 const debugModeIsOn = true;
 const startKey = "s";
 const restartKey = "r";
@@ -23,6 +23,7 @@ let bird = new Bird();
 let score = new Score ();
 
 let liv = 3;
+let livscore = new Livscore ();
 
 // create 3 clouds cloud
 new Cloud();

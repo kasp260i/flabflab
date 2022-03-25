@@ -16,7 +16,7 @@ class Firework extends GameObject {
         this.xPosition = spawnXPosition;
         this.yPosition = randomBetween(0, canvas.height);
         this.yOffset = 0;
-        this.oscillilationScale = randomBetween(0, 500);
+        this.oscillilationScale = randomBetween(0, 200);
         this.oscillilationTime = 0;
         this.oscillilationSpeed = randomBetween(0, 0.05);
     }
@@ -42,6 +42,8 @@ class Firework extends GameObject {
  
     update() {
         this.xPosition += this.xSpeed;
+        this.oscillate();
+
 
         if(this.xPosition < destructionXPosition) {
             this.destroy();
@@ -49,8 +51,12 @@ class Firework extends GameObject {
 
         if  (
             theseCirclesCollide(
-            bird.xPosition, bird.yPosition, bird.hitboxRadius,
-            this.xPosition, this.yPosition, this.hitboxRadius)
+                bird.xPosition,
+                bird.yPosition,
+                bird.hitboxRadius,
+                this.xPosition,
+                this.yPosition + this.yOffset,
+                this.hitboxRadius)
             && gameState == "action") 
         {
        liv = liv-1
@@ -64,7 +70,7 @@ class Firework extends GameObject {
         
         }
         }
-       
+        
     }
  
     oscillate() {

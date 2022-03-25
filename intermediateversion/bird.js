@@ -7,7 +7,7 @@ class Bird extends GameObject {
         this.xPosition = 250;
         this.yPosition = 250;
         this.ySpeed = 0;
-        this.beginningYAccelleration = 0.7;
+        this.beginningYAccelleration = 0.7; //lavere hvis 144 fps
         this.yAccelleration = 0;
         this.hitboxRadius = 30;
         this.image = new Image(90, 90);

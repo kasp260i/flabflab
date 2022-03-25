@@ -1,6 +1,6 @@
 class Diamond extends GameObject {
  
-    static spawnInterval = 500;
+    static spawnInterval = 2000;
     static timeSinceLastSpawn = Diamond.spawnInterval;
  
     constructor() {
@@ -11,7 +11,7 @@ class Diamond extends GameObject {
         this.image = new Image(60, 60);
         this.image.src = "../assets/images/diamond.png";
         this.hitboxRadius = 30;
-        this.xSpeed = -10;
+        this.xSpeed = -10; //lavere hvis 144 fps
         this.value = 5;
         this.xPosition = spawnXPosition;
         this.yPosition = randomBetween(0, canvas.height);

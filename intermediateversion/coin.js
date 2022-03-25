@@ -13,7 +13,7 @@ class Coin extends GameObject {
         this.xPosition = spawnXPosition;
         this.yPosition = randomBetween(0, canvas.height);
         this.hitboxRadius = 30;
-        this.xSpeed = -5;
+        this.xSpeed = -5; //lavere hvis 144 fps
         this.value = 1;
     }
 

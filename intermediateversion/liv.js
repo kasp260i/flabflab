@@ -1,6 +1,6 @@
 class Guldliv extends GameObject {
  
-    static spawnInterval = 500;
+    static spawnInterval = 5000;
     static timeSinceLastSpawn = Guldliv.spawnInterval;
  
     constructor() {

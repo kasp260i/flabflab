@@ -11,7 +11,7 @@ class Fireball extends GameObject {
         this.image.src = "../assets/images/fireball.png";
         this.xPosition = spawnXPosition;
         this.yPosition = randomBetween(0, canvas.height);
-        this.xSpeed = -5.5;
+        this.xSpeed = -5.5; //lavere hvis 144 fps
         this.hitboxRadius = 100;
     }
 
