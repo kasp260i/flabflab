@@ -47,13 +47,22 @@ class Fireball extends GameObject {
             this.xPosition, this.yPosition, this.hitboxRadius)
             && gameState == "action") 
         {
-            bird.canFlap = false;
-            gameOverSound.play();
-            flapText.isActive = false;
-            gameOverText.isActive = true;
-            gameState = "gameover";
+       liv = liv-1
+       this.destroy()
+       if(liv==0){
+        bird.canFlap = false;
+        gameOverSound.play();
+        flapText.isActive = false;
+        gameOverText.isActive = true;
+        gameState = "gameover";
+        
         }
+        }
+       
     }
+
+   
+
 
     static getRandomYPosition() {
         return Utility.randomBetween(0, Canvas.getHeight());

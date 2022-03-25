@@ -36,6 +36,7 @@ document.addEventListener("keydown", function(event) {
         GameObject.destroyAllWithTag("fireball");
         GameObject.destroyAllWithTag("coin");
         score.value = 0;
+        liv = 3;
         gameOverText.isActive = false;
         startText.isActive = true;
 

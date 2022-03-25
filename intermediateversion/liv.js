@@ -1,15 +1,15 @@
-class Firework extends GameObject {
+class Guldliv extends GameObject {
  
     static spawnInterval = 500;
-    static timeSinceLastSpawn = Firework.spawnInterval;
+    static timeSinceLastSpawn = Guldliv.spawnInterval;
  
     constructor() {
         let drawOrder = 10;
-        let tag = "firework";
+        let tag = "guldliv";
         super(drawOrder, tag);
         this.sound = new Audio("../assets/sounds/coin.wav");
         this.image = new Image(60, 60);
-        this.image.src = "../assets/images/firework.png";
+        this.image.src = "../assets/images/guldliv.png";
         this.hitboxRadius = 30;
         this.xSpeed = -10;
         this.value = 5;
@@ -35,7 +35,7 @@ class Firework extends GameObject {
                 this.xPosition,
                 this.yPosition + this.yOffset,
                 this.hitboxRadius,
-                hitboxOND
+                hitboxColor
             );
         }
     }
@@ -53,16 +53,8 @@ class Firework extends GameObject {
             this.xPosition, this.yPosition, this.hitboxRadius)
             && gameState == "action") 
         {
-       liv = liv-1
+       liv = liv+1
        this.destroy()
-       if(liv==0){
-        bird.canFlap = false;
-        gameOverSound.play();
-        flapText.isActive = false;
-        gameOverText.isActive = true;
-        gameState = "gameover";
-        
-        }
         }
        
     }

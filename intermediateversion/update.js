@@ -25,6 +25,17 @@ function update() {
         Firework.timeSinceLastSpawn += timeSinceLastFrame;
     }
 
+     // spawn a new guldliv when if it is time
+     if(gameState == "action" &&
+     Guldliv.timeSinceLastSpawn > Guldliv.spawnInterval) {
+         new Guldliv ();
+         Guldliv.timeSinceLastSpawn = 0;
+     }
+ 
+     if(gameState == "action") {
+         Guldliv.timeSinceLastSpawn += timeSinceLastFrame;
+     }
+
 
      // spawn a new cloud when if it is time
      Cloud.timeSinceLastSpawn += timeSinceLastFrame;
