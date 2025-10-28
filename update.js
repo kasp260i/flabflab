@@ -69,7 +69,7 @@ function update() {
 
     if(debugModeIsOn) {
         drawText(
-            "timeSinceLastFrame: " + timeSinceLastFrame,
+           "FPS: " + (1000 / timeSinceLastFrame).toFixed(1),
             canvas.width/2,
             20,
             12,
